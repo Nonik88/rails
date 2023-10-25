@@ -40,6 +40,10 @@ module ActiveModel
         end
       end
 
+      def type_for_attribute(attribute)
+        attribute_types[attribute.to_s]
+      end
+
       private
         PendingType = Struct.new(:name, :type) do # :nodoc:
           def apply_to(attribute_set)

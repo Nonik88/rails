@@ -71,6 +71,7 @@ module ActiveModel
     included do
       class_attribute :attribute_aliases, instance_writer: false, default: {}
       class_attribute :attribute_method_patterns, instance_writer: false, default: [ ClassMethods::AttributeMethodPattern.new ]
+      include BeforeTypeCast
     end
 
     module ClassMethods

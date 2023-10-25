@@ -44,6 +44,7 @@ module ActiveModel
   autoload :Conversion
   autoload :Dirty
   autoload :EachValidator, "active_model/validator"
+  autoload :Enum
   autoload :ForbiddenAttributesProtection
   autoload :Lint
   autoload :Model
@@ -63,6 +64,14 @@ module ActiveModel
     autoload :StrictValidationFailed, "active_model/errors"
     autoload :UnknownAttributeError, "active_model/errors"
     autoload :ValidationError, "active_model/validations"
+  end
+
+  module AttributeMethods
+    extend ActiveSupport::Autoload
+
+    eager_autoload do
+      autoload :BeforeTypeCast
+    end
   end
 
   module Serializers

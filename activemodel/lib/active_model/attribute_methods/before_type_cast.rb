@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-module ActiveRecord
+module ActiveModel
   module AttributeMethods
-    # = Active Record Attribute Methods Before Type Cast
+    # = Active Model Attribute Methods Before Type Cast
     #
-    # ActiveRecord::AttributeMethods::BeforeTypeCast provides a way to
+    # ActiveModel::AttributeMethods::BeforeTypeCast provides a way to
     # read the value of the attributes before typecasting and deserialization.
     #
     #   class Task < ActiveRecord::Base
